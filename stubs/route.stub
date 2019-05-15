@@ -1,0 +1,48 @@
+<?php
+
+namespace App\Explains;
+
+use Lemon\Explainer\Explain\Route;
+use Lemon\Explainer\Explain\Param;
+
+class NAME extends Route
+{
+    public function description() : string
+    {
+        return '';
+    }
+
+    public function params() : array
+    {
+        return [];
+    }
+
+    public function input() : array
+    {
+        return [];
+    }
+
+    public function query() : array
+    {
+        return [];
+    }
+
+    public function requests() : array
+    {
+        return [];
+    }
+
+    public function responses() : array
+    {
+        return [
+            // 200 => new NAMESuccessExample,
+            // 401 => new Common401Example,
+            // 422 => new Common422Example
+        ];
+    }
+
+    public function deprecated() : bool
+    {
+        return FALSE;
+    }
+}

@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Explains\Examples;
+
+use Lemon\Explainer\Explain\Example;
+
+class NAME extends Example
+{
+    public function description() : string
+    {
+        return '';
+    }
+
+    public function code()
+    {
+        return '';
+    }
+}

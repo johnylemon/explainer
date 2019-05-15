@@ -1,0 +1,25 @@
+{
+    "name": "johnylemon/explainer",
+    "description": "API explainer",
+    "license": "MIT",
+    "version": "1.0.0",
+    "keywords": [
+        "api",
+        "swagger",
+        "rest"
+    ],
+    "authors": [
+        {
+            "name": "Piotr Krzempek",
+            "email": "johnylemon1989@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "5.8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lemon\\Explainer\\": "src"
+        }
+    }
+}
