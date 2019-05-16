@@ -2,7 +2,6 @@
     "name": "johnylemon/explainer",
     "description": "API explainer",
     "license": "MIT",
-    "version": "1.0.0",
     "keywords": [
         "api",
         "swagger",
