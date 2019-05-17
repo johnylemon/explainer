@@ -28,6 +28,6 @@ trait Stubs
 
     protected function createDirectory($path)
     {
-        file_exists($path) || mkdir($path, 0755);
+        file_exists($path) || mkdir($path, 0755, TRUE);
     }
 }

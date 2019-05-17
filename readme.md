@@ -39,7 +39,7 @@ php artisan explain:example ValidationExample
 
 ```
 
-#### generate documentation
+#### Generate documentation
 
 Simply type
 ```
