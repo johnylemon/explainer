@@ -10,7 +10,7 @@ class Param
     protected $type;
     protected $description = '';
     protected $required = FALSE;
-    protected $default = FALSE;
+    protected $default = NULL;
     protected $possible = NULL;
 
     final public function data() : array
