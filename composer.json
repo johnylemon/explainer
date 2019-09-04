@@ -13,9 +13,6 @@
             "email": "johnylemon1989@gmail.com"
         }
     ],
-    "require": {
-        "laravel/framework": "5.8.*"
-    },
     "autoload": {
         "psr-4": {
             "Lemon\\Explainer\\": "src"
