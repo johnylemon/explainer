@@ -6,7 +6,8 @@ use Illuminate\Support\ServiceProvider;
 use Lemon\Explainer\Commands\{
     Explainer,
     ExplainRoute,
-    ExplainExample
+    ExplainResponse,
+    ExplainRequest
 };
 use ReflectionClass;
 
@@ -36,6 +37,8 @@ class ExplainerServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../resources/js' => public_path('js'),
             __DIR__.'/../../resources/css' => public_path('css'),
+            __DIR__.'/../../resources/fonts' => public_path('fonts'),
+            __DIR__.'/../../resources/images' => public_path('images'),
         ], 'explainer-assets');
 
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'explainer');
@@ -45,7 +48,8 @@ class ExplainerServiceProvider extends ServiceProvider
             $this->commands([
                 Explainer::class,
                 ExplainRoute::class,
-                ExplainExample::class,
+                ExplainResponse::class,
+                ExplainRequest::class,
             ]);
         }
     }

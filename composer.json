@@ -13,6 +13,9 @@
             "email": "johnylemon1989@gmail.com"
         }
     ],
+    "require": {
+        "erusev/parsedown": "^1.7"
+    },
     "autoload": {
         "psr-4": {
             "Lemon\\Explainer\\": "src"

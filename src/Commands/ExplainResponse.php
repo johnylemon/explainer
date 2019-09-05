@@ -5,7 +5,7 @@ namespace Lemon\Explainer\Commands;
 use Illuminate\Console\Command;
 use Lemon\Explainer\Traits\Stubs;
 
-class ExplainExample extends Command
+class ExplainResponse extends Command
 {
     use Stubs;
 
@@ -14,14 +14,14 @@ class ExplainExample extends Command
      *
      * @var string
      */
-    protected $signature = 'explain:example {name}';
+    protected $signature = 'explain:response {name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Explain example';
+    protected $description = 'Explain response';
 
     /**
      * Create a new command instance.
@@ -44,15 +44,15 @@ class ExplainExample extends Command
 
         $this->createDirectory($this->path());
 
-        $this->stub('example', $this->path()."/$name", [
+        $this->stub('response', $this->path()."/$name", [
             'NAME' => $name
         ]);
 
-        $this->comment("Example explain $name has been created");
+        $this->comment("Response explain $name has been created");
     }
 
     protected function path()
     {
-        return app_path("Explains/Examples");
+        return app_path("Explains/Responses");
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Explains\Examples;
+namespace App\Explains\Responses;
 
-use Lemon\Explainer\Explain\Example;
+use Lemon\Explainer\Explain\Response;
 
-class NAME extends Example
+class NAME extends Response
 {
     public function description() : string
     {

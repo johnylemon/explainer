@@ -2,6 +2,7 @@
 
 namespace Lemon\Explainer\Explain;
 
+use Lemon\Explainer\Facades\Parser;
 use Exception;
 
 class Param
@@ -16,7 +17,7 @@ class Param
     final public function data() : array
     {
         return [
-            'description' => $this->description,
+            'description' => Parser::markdown($this->description),
             'required' => $this->required,
             'default' => $this->default,
             'possible' => $this->possible,
@@ -71,9 +72,14 @@ class Param
         return $this;
     }
 
+    public function optional(bool $optional = TRUE) : Param
+    {
+        return $this->required(!$optional);
+    }
+
     public function description(string $description) : Param
     {
-        $this->description = $description;
+        $this->description = nl2br($description);
 
         return $this;
     }

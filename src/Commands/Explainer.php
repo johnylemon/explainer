@@ -46,11 +46,22 @@ class Explainer extends Command
     {
         $explainer = new ApiExplainer();
 
-        file_put_contents(config('explainer.json_path'), $explainer);
-
-        $this->comment("Explainer file has been created");
+        $this->storeJson($explainer);
 
         $this->copyAssets();
+    }
+
+    protected function storeJson(ApiExplainer $explainer)
+    {
+        $path = config('explainer.json_path');
+        $directory = pathinfo($path)['dirname'];
+
+        if(!file_exists($directory))
+            mkdir($directory, 0755, TRUE);
+
+        file_put_contents($path, $explainer);
+
+        $this->comment("Explainer file has been created");
     }
 
     protected function copyAssets()

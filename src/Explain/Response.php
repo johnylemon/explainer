@@ -3,8 +3,9 @@
 namespace Lemon\Explainer\Explain;
 
 use JsonSerializable;
+use Lemon\Explainer\Facades\Parser;
 
-abstract class Example implements JsonSerializable
+abstract class Response implements JsonSerializable
 {
     abstract public function description() : string;
     abstract public function code();
@@ -12,7 +13,7 @@ abstract class Example implements JsonSerializable
     public function jsonSerialize()
     {
         return [
-            'description' => $this->description(),
+            'description' => Parser::markdown($this->description()),
             'code' => $this->code()
         ];
     }
